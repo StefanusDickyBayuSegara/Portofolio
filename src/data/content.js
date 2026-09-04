@@ -234,8 +234,8 @@ export const projectsContent = {
       },
       githubUrl: "https://github.com/StefanusDickyBayuSegara",
       demoUrl: null,
-      imagePlaceholder: "project-medlink.png",
-      aspectRatio: "aspect-[22/10]",
+      imagePlaceholder: "project-medlink.jpg",
+      aspectRatio: "aspect-[16/10]",
     },
     {
       id: "expense-tracker",
@@ -249,8 +249,8 @@ export const projectsContent = {
       },
       githubUrl: "https://github.com/StefanusDickyBayuSegara",
       demoUrl: null,
-      imagePlaceholder: "project-expense-tracker.jpeg",
-      aspectRatio: "aspect-[4/5]",
+      imagePlaceholder: "project-expense-tracker.jpg",
+      aspectRatio: "aspect-[16/10]",
     },
     {
       id: "kanisius-lms",
@@ -265,6 +265,7 @@ export const projectsContent = {
       githubUrl: "https://github.com/StefanusDickyBayuSegara",
       demoUrl: null,
       imagePlaceholder: "project-kanisius-lms.jpg",
+      aspectRatio: "aspect-[16/10]",
     },
     {
       id: "recipe-app",
@@ -298,7 +299,7 @@ export const certificatesContent = {
       title: "SAP01 – SAP Overview",
       issuer: "SAP University Partnership Program & Universitas Kristen Duta Wacana",
       date: "November 2024",
-      imagePlaceholder: "certificate-sap01.jpg",
+      imagePlaceholder: "certificate-sap01.jpeg",
     },
   ],
 };

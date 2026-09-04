@@ -1,10 +1,14 @@
 import { Award, CheckCircle2, Calendar, Building2 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { certificatesContent } from '../data/content';
-import PlaceholderImage from './ui/PlaceholderImage';
+import ImageLightbox from './ui/ImageLightbox';
 
 export default function Certificates() {
   const { t, language } = useLanguage();
+  const certificateImages = import.meta.glob('../assets/certificates/*.{png,jpg,jpeg,webp}', {
+    eager: true,
+    import: 'default',
+  });
 
   return (
     <section id="sertifikasi" className="py-20 md:py-28 border-t border-dark-border/60">
@@ -29,7 +33,8 @@ export default function Certificates() {
         {/* Galeri / List Sertifikat (Mudah ditambah di content.js) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {certificatesContent.items.map((cert) => {
-            const certImageSrc = `/src/assets/certificates/${cert.imagePlaceholder}`;
+            const certImageKey = `../assets/certificates/${cert.imagePlaceholder}`;
+            const certImageSrc = certificateImages[certImageKey] || null;
 
             return (
               <div
@@ -39,7 +44,7 @@ export default function Certificates() {
                 <div>
                   {/* Slot Placeholder Preview Sertifikat */}
                   <div className="mb-5 overflow-hidden rounded-xl bg-dark-bg border border-dark-border/60">
-                    <PlaceholderImage
+                    <ImageLightbox
                       src={certImageSrc}
                       alt={cert.title}
                       expectedFilename={`src/assets/certificates/${cert.imagePlaceholder}`}

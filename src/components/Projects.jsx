@@ -2,7 +2,7 @@ import { FolderGit2, Calendar, Sparkles } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { projectsContent } from '../data/content';
 import ExternalLink from './ui/ExternalLink';
-import PlaceholderImage from './ui/PlaceholderImage';
+import ImageLightbox from './ui/ImageLightbox';
 import { GithubIcon } from './ui/Icons';
 
 export default function Projects() {
@@ -53,7 +53,7 @@ export default function Projects() {
                   {/* Container Placeholder / Gambar Thumbnail */}
                   <div className="p-3 pb-0">
                     <div className="overflow-hidden rounded-xl bg-dark-bg">
-                      <PlaceholderImage
+                      <ImageLightbox
                         src={imageSrc}
                         alt={project.title}
                         expectedFilename={`src/assets/projects/${project.imagePlaceholder}`}
