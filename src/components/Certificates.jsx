@@ -5,7 +5,7 @@ import ImageLightbox from './ui/ImageLightbox';
 
 export default function Certificates() {
   const { t, language } = useLanguage();
-  const certificateImages = import.meta.glob('../assets/certificates/*.{png,jpg,jpeg,webp}', {
+  const certificateFiles = import.meta.glob('../assets/certificates/*', {
     eager: true,
     import: 'default',
   });
@@ -33,8 +33,9 @@ export default function Certificates() {
         {/* Galeri / List Sertifikat (Mudah ditambah di content.js) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {certificatesContent.items.map((cert) => {
-            const certImageKey = `../assets/certificates/${cert.imagePlaceholder}`;
-            const certImageSrc = certificateImages[certImageKey] || null;
+            const certFileKey = `../assets/certificates/${cert.imagePlaceholder}`;
+            const certFileSrc = certificateFiles[certFileKey] || null;
+            const isPdf = cert.imagePlaceholder.toLowerCase().endsWith('.pdf');
 
             return (
               <div
@@ -44,20 +45,31 @@ export default function Certificates() {
                 <div>
                   {/* Slot Placeholder Preview Sertifikat */}
                   <div className="mb-5 overflow-hidden rounded-xl bg-dark-bg border border-dark-border/60">
-                    <ImageLightbox
-                      src={certImageSrc}
-                      alt={cert.title}
-                      expectedFilename={`src/assets/certificates/${cert.imagePlaceholder}`}
-                      aspectRatio="aspect-[16/10]"
-                      className="group-hover:scale-102 transition-transform duration-300"
-                      iconSize={32}
-                    />
+                    {isPdf ? (
+                      <a
+                        href={certFileSrc}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex aspect-[16/10] items-center justify-center text-sm font-mono text-primary hover:text-slate-100 transition-colors"
+                      >
+                        Buka dokumen PDF
+                      </a>
+                    ) : (
+                      <ImageLightbox
+                        src={certFileSrc}
+                        alt={cert.title}
+                        expectedFilename={`src/assets/certificates/${cert.imagePlaceholder}`}
+                        aspectRatio="aspect-[16/10]"
+                        className="group-hover:scale-102 transition-transform duration-300"
+                        iconSize={32}
+                      />
+                    )}
                   </div>
 
                   {/* Badge Terverifikasi */}
                   <div className="flex items-center gap-1.5 text-xs font-mono text-primary mb-2">
                     <CheckCircle2 size={14} />
-                    <span>Verified Credential</span>
+                    <span>{cert.badge}</span>
                   </div>
 
                   {/* Judul Sertifikasi */}

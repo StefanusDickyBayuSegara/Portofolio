@@ -227,10 +227,10 @@ export const projectsContent = {
       title: "MedLink – Web-Based OTC Drug Recommendation System",
       type: { id: "Proyek Skripsi", en: "Thesis Project" },
       year: "2026",
-      tech: ["React.js", "Flask (Python)", "MySQL", "TF-IDF", "Cosine Similarity", "JWT Auth", "Bootstrap"],
+      tech: ["React.js", "Flask (Python)", "MySQL", "SQLAlchemy", "JWT", "Bootstrap"],
       description: {
-        id: "Sistem rekomendasi obat OTC (Over The Counter) berbasis gejala pengguna menggunakan algoritma Content-Based Filtering (TF-IDF & Cosine Similarity) dengan hasil evaluasi recall 100%, F1-score 60,88%, dan usability di atas 90. Terintegrasi filter medis keamanan usia, gender, kondisi hamil, dan riwayat kesehatan.",
-        en: "User symptom-based OTC drug recommendation system utilizing Content-Based Filtering (TF-IDF & Cosine Similarity) achieving 100% recall, 60.88% F1-score, and >90 usability score. Integrated with safety filters for age, gender, pregnancy status, and medical history.",
+        id: "Sistem rekomendasi obat OTC berbasis gejala menggunakan React.js, Flask (Python), MySQL, SQLAlchemy, JWT, dan Bootstrap, dengan hasil evaluasi recall 100%, F1-score 60,88%, serta usability score di atas 90.",
+        en: "Symptom-based OTC drug recommendation system built with React.js, Flask (Python), MySQL, SQLAlchemy, JWT, and Bootstrap, achieving 100% recall, a 60.88% F1-score, and a usability score above 90.",
       },
       githubUrl: "https://github.com/StefanusDickyBayuSegara",
       demoUrl: null,
@@ -242,10 +242,10 @@ export const projectsContent = {
       title: "Expense Tracker – Aplikasi Pencatat Keuangan Pribadi",
       type: { id: "Aplikasi Android", en: "Android App" },
       year: "2026",
-      tech: ["Kotlin", "Android SDK", "MVVM", "SQLite", "Firebase Auth", "Cloud Firestore"],
+      tech: ["Kotlin", "MVVM", "SQLite", "Firebase"],
       description: {
-        id: "Aplikasi pencatat keuangan personal dengan visualisasi grafik pie/bar, peringatan otomatis batas anggaran belanja, ekspor laporan PDF (dapat langsung dibagikan via WhatsApp/Email/Drive), sinkronisasi awan Firebase, widget saldo cepat, dan antarmuka dark mode.",
-        en: "Personal finance tracker app featuring categorized budgeting, pie/bar chart analytics, automatic budget limit thresholds, PDF report generation, Firebase cloud sync/backup, desktop home balance widget, and dark theme support.",
+        id: "Aplikasi pencatat keuangan Android dengan kategori transaksi, grafik pie/bar, budget limit, ekspor PDF, backup/restore cloud, dan dark mode.",
+        en: "Android finance tracker with transaction categories, pie/bar charts, budget limits, PDF export, cloud backup/restore, and dark mode.",
       },
       githubUrl: "https://github.com/StefanusDickyBayuSegara",
       demoUrl: null,
@@ -267,20 +267,6 @@ export const projectsContent = {
       imagePlaceholder: "project-kanisius-lms.jpg",
       aspectRatio: "aspect-[16/10]",
     },
-    {
-      id: "recipe-app",
-      title: "Recipe Web Application",
-      type: { id: "Proyek Web", en: "Web Project" },
-      year: "2025",
-      tech: ["PHP", "Laravel (Blade)", "MySQL", "CSS"],
-      description: {
-        id: "Aplikasi web interaktif untuk eksplorasi dan kurasi resep masakan, dilengkapi kapabilitas CRUD komprehensif untuk komposisi bahan dan tahapan memasak, fitur pencarian cepat, serta tata letak responsif.",
-        en: "Interactive recipe discovery and management web application featuring full CRUD capabilities for culinary ingredients and instructions, rapid search, and a responsive interface.",
-      },
-      githubUrl: "https://github.com/StefanusDickyBayuSegara",
-      demoUrl: null,
-      imagePlaceholder: "project-recipe.jpg",
-    },
   ],
 };
 
@@ -296,10 +282,27 @@ export const certificatesContent = {
   items: [
     {
       id: "sap-01",
+      badge: "Verified Credential",
       title: "SAP01 – SAP Overview",
       issuer: "SAP University Partnership Program & Universitas Kristen Duta Wacana",
       date: "November 2024",
       imagePlaceholder: "certificate-sap01.jpeg",
+    },
+    {
+      id: "magang-sim-mbkm",
+      badge: "Sertifikat Magang",
+      title: "Sertifikat Magang SIM (Sistem Informasi Manajemen)",
+      issuer: "PT KANISIUS - Divisi SDM, Sarpras dan SIM",
+      date: "Desember 2025",
+      imagePlaceholder: "Sertifikat Magang SIM MBKM an. Stefanus Dicky Bayu Segara.pdf",
+    },
+    {
+      id: "asisten-praktikum-analisis-proses-bisnis",
+      badge: "Sertifikat Asisten Dosen",
+      title: "Surat Keterangan Asisten Praktikum - Analisis Proses Bisnis",
+      issuer: "Program Studi Informatika, FST, Universitas Sanata Dharma",
+      date: "Agustus 2026",
+      imagePlaceholder: "SKAP_Genap 2025_225314015_Analisis Proses Bisnis_CP.jpg",
     },
   ],
 };
