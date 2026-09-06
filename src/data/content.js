@@ -18,13 +18,14 @@ export const personalInfo = {
     id: "D.I. Yogyakarta, Indonesia",
     en: "Yogyakarta Special Region, Indonesia",
   },
-  roles: {
-    id: "Web & Android Developer",
-    en: "Web & Android Developer",
-  },
+  roles: [
+    { id: "Web & Android Developer", en: "Web & Android Developer" },
+    { id: "Data Analyst", en: "Data Analyst" },
+    { id: "Product Manager", en: "Product Manager" },
+  ],
   status: {
-    id: "Tersedia untuk Peluang Kerja (Yogyakarta / Remote)",
-    en: "Available for Opportunities (Yogyakarta / Remote)",
+    id: "Tersedia untuk Peluang Kerja: Product Manager, Web Developer, Data Analyst (Yogyakarta / Remote)",
+    en: "Available for Opportunities: Product Manager, Web Developer, Data Analyst (Yogyakarta / Remote)",
   },
 };
 
@@ -73,32 +74,6 @@ export const aboutContent = {
     id: "Unduh CV Lengkap",
     en: "Download Full Resume",
   },
-  stats: [
-    {
-      value: "S1",
-      unit: "Informatika",
-      sub: "Univ. Sanata Dharma (2022–2026)",
-      label: { id: "Pendidikan", en: "Education" },
-    },
-    {
-      value: "3.41",
-      unit: "/ 4.00",
-      sub: { id: "Predikat Sangat Memuaskan", en: "Very Satisfactory Distinction" },
-      label: { id: "IPK Kelulusan", en: "Cumulative GPA" },
-    },
-    {
-      value: "4+",
-      unit: "Proyek",
-      sub: { id: "Web Full-stack & Android", en: "Full-stack Web & Android" },
-      label: { id: "Portofolio Proyek", en: "Completed Projects" },
-    },
-    {
-      value: "1",
-      unit: "MBKM",
-      sub: "PT Kanisius (Divisi HR & SIM)",
-      label: { id: "Pengalaman Magang", en: "Industry Internship" },
-    },
-  ],
 };
 
 export const experiencesContent = {

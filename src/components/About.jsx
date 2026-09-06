@@ -1,4 +1,4 @@
-import { Download, GraduationCap, Briefcase, Award, Users, Calendar } from 'lucide-react';
+import { Download, GraduationCap, Briefcase, Calendar } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { personalInfo, aboutContent, experiencesContent } from '../data/content';
 
@@ -20,9 +20,8 @@ export default function About() {
           </h2>
         </div>
 
-        {/* Baris Atas: Paragraf Narasi Profil + Tombol Unduh CV */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
-          <div className="lg:col-span-8">
+        {/* Narasi Profil + Tombol Unduh CV */}
+        <div className="mb-12">
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-6 font-normal">
               {t(aboutContent.bio)}
             </p>
@@ -43,57 +42,10 @@ export default function About() {
                 </span>
               </a>
             </div>
-          </div>
-
-          {/* Kotak ringkasan nilai tambah / fokus */}
-          <div className="lg:col-span-4 p-6 rounded-2xl bg-dark-surface/50 border border-dark-border">
-            <h3 className="text-sm font-semibold text-slate-200 uppercase tracking-wider mb-4 font-mono">
-              Core Focus
-            </h3>
-            <ul className="space-y-3 text-xs sm:text-sm text-slate-400">
-              <li className="flex items-start gap-2.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
-                <span>Full-stack Web Engineering (Laravel, React, Flask)</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-accent-indigo mt-1.5 shrink-0" />
-                <span>Modern Android Apps (Kotlin, MVVM, SQLite, Firebase)</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-accent-teal mt-1.5 shrink-0" />
-                <span>Database Design, ERD, SQL & Content-Based Recommendation</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Grid 4 Statistik Angka Utama (Bukan card generik) */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-20">
-          {aboutContent.stats.map((stat, idx) => (
-            <div
-              key={idx}
-              className="p-5 sm:p-6 rounded-2xl bg-dark-surface border border-dark-border hover:border-slate-700 transition-colors"
-            >
-              <div className="flex items-baseline gap-1.5 mb-1.5">
-                <span className="text-3xl sm:text-4xl font-extrabold font-mono text-slate-50 tracking-tight">
-                  {stat.value}
-                </span>
-                <span className="text-xs sm:text-sm font-mono text-primary font-medium">
-                  {stat.unit}
-                </span>
-              </div>
-              <p className="text-xs sm:text-sm font-semibold text-slate-200 mb-1">
-                {t(stat.label)}
-              </p>
-              <p className="text-[11px] sm:text-xs text-slate-400 leading-snug">
-                {typeof stat.sub === 'object' ? t(stat.sub) : stat.sub}
-              </p>
-            </div>
-          ))}
         </div>
 
         {/* Sub-Section: Pengalaman & Kegiatan (MBKM, Asdos, Organisasi) */}
-        <div className="pt-4">
+        <div>
           <div className="flex items-center gap-3 mb-8">
             <Briefcase size={20} className="text-primary" />
             <h3 className="text-xl sm:text-2xl font-bold text-slate-100">

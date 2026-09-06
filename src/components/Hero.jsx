@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { Mail, MapPin } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { personalInfo, heroContent } from '../data/content';
@@ -8,6 +9,25 @@ import { GithubIcon, LinkedinIcon } from './ui/Icons';
 
 export default function Hero() {
   const { t } = useLanguage();
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [roleVisible, setRoleVisible] = useState(true);
+  const roles = personalInfo.roles;
+
+  useEffect(() => {
+    let transitionTimeout;
+    const intervalId = setInterval(() => {
+      setRoleVisible(false);
+      transitionTimeout = setTimeout(() => {
+        setRoleIndex((currentIndex) => (currentIndex + 1) % roles.length);
+        setRoleVisible(true);
+      }, 250);
+    }, 3000);
+
+    return () => {
+      clearInterval(intervalId);
+      clearTimeout(transitionTimeout);
+    };
+  }, [roles.length]);
 
   // Fungsi navigasi smooth scroll ke section tertentu saat tombol diklik
   const scrollToSection = (id) => {
@@ -62,8 +82,12 @@ export default function Hero() {
 
             {/* Peran / Title Spesialisasi */}
             <h2 className="text-xl sm:text-2xl font-semibold text-slate-300 mb-5">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-100 via-slate-200 to-slate-400">
-                {t(personalInfo.roles)}
+              <span
+                key={roleIndex}
+                className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-slate-100 via-slate-200 to-slate-400 transition-opacity duration-500"
+                style={{ opacity: roleVisible ? 1 : 0 }}
+              >
+                {t(roles[roleIndex])}
               </span>
             </h2>
 
