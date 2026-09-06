@@ -21,11 +21,11 @@ export const personalInfo = {
   roles: [
     { id: "Web & Android Developer", en: "Web & Android Developer" },
     { id: "Data Analyst", en: "Data Analyst" },
-    { id: "Product Manager", en: "Product Manager" },
+    { id: "Web Developer", en: "Web Developer" },
   ],
   status: {
-    id: "Tersedia untuk Peluang Kerja: Product Manager, Web Developer, Data Analyst (Yogyakarta / Remote)",
-    en: "Available for Opportunities: Product Manager, Web Developer, Data Analyst (Yogyakarta / Remote)",
+    id: "Tersedia untuk Peluang Kerja: Web Developer, Project Support, Fullstack Developer (Yogyakarta / Remote)",
+    en: "Available for Opportunities: Web Developer, Project Support, Fullstack Developer (Yogyakarta / Remote)",
   },
 };
 
@@ -44,8 +44,8 @@ export const heroContent = {
     en: "Hello, I'm",
   },
   subtitle: {
-    id: "Lulusan Informatika yang berfokus membangun aplikasi web full-stack dan mobile Android fungsional, terstruktur, dan berorientasi pada solusi nyata pengguna.",
-    en: "Informatics graduate focused on engineering robust, high-performance full-stack web and Android applications built for real-world user solutions.",
+    id: "Lulusan Informatika yang membangun aplikasi web full-stack secara terstruktur, didukung kemampuan analisis proses bisnis dan dokumentasi proyek yang rapi.",
+    en: "Informatics graduate building structured full-stack web applications, supported by business process analysis skills and well-organized project documentation.",
   },
   ctaProjects: {
     id: "Lihat Proyek",
@@ -67,8 +67,8 @@ export const aboutContent = {
     en: "Background & Profile",
   },
   bio: {
-    id: "Lulusan Informatika dari Universitas Sanata Dharma (IPK 3.41/4.00, predikat Sangat Memuaskan) dengan pengalaman langsung membangun aplikasi web full-stack dan aplikasi Android melalui program magang serta proyek akademik mandiri. Terbiasa bekerja dengan PHP, CodeIgniter, Laravel, Python (Flask), JavaScript, React.js, dan Kotlin (Android), dengan pengalaman praktis dalam perancangan basis data, analisis proses bisnis, dan sistem rekomendasi berbasis konten. Berpengalaman sebagai asisten dosen untuk mata kuliah Analisis Proses Bisnis dan aktif dalam organisasi kampus.",
-    en: "Informatics graduate from Sanata Dharma University (GPA 3.41/4.00, Very Satisfactory distinction) with hands-on experience building full-stack web and Android applications through internship programs and independent academic projects. Proficient in working with PHP, CodeIgniter, Laravel, Python (Flask), JavaScript, React.js, and Kotlin (Android), with practical expertise in database architecture, business process analysis, and content-based recommendation systems. Experienced as a teaching assistant for Business Process Analysis and actively engaged in campus organizations.",
+    id: "Lulusan Informatika dari Universitas Sanata Dharma (IPK 3.41/4.00, predikat Sangat Memuaskan) dengan pengalaman kuat membangun aplikasi web full-stack, mulai dari perancangan basis data, pengembangan frontend (React.js), backend (PHP, CodeIgniter, Laravel, Flask), hingga integrasi API dan sistem rekomendasi berbasis konten. Pemahaman ini diperkuat oleh pengalaman sebagai asisten dosen mata kuliah Analisis Proses Bisnis, di mana saya terbiasa memetakan alur proses kerja, mengidentifikasi tahapan kritis, mengevaluasi progres, dan menyusun dokumentasi/laporan secara terstruktur. Ditambah dasar pemahaman sistem ERP melalui program SAP University Partnership Program serta pengalaman koordinasi tim dari kegiatan kampus, latar belakang saya seimbang antara kekuatan teknis dan kemampuan administrasi/koordinasi proyek.",
+    en: "Informatics graduate from Sanata Dharma University (GPA 3.41/4.00, Very Satisfactory distinction) with strong experience building full-stack web applications, from database design and frontend development (React.js) to backend development (PHP, CodeIgniter, Laravel, Flask), API integration, and content-based recommendation systems. This foundation was strengthened through experience as a teaching assistant for Business Process Analysis, where I regularly mapped workflows, identified critical stages, evaluated progress, and prepared structured documentation and reports. Combined with foundational ERP knowledge from the SAP University Partnership Program and team coordination experience through campus activities, my background balances technical strength with project administration and coordination skills.",
   },
   downloadCv: {
     id: "Unduh CV Lengkap",
@@ -91,8 +91,8 @@ export const experiencesContent = {
       period: "Agustus – Desember 2025",
       type: "Internship",
       description: {
-        id: "Merancang dan mengembangkan platform pelatihan internal berbasis web (LMS) untuk standarisasi alur pelatihan karyawan serta sistem monitoring evaluasi bagi administrator HR.",
-        en: "Designed and developed an internal web-based training platform (LMS) to standardize employee training workflows and evaluation tracking for HR administration.",
+        id: "Merancang dan mengembangkan platform pelatihan internal berbasis web (LMS) untuk standarisasi alur pelatihan karyawan serta sistem monitoring evaluasi bagi administrator HR. Turut berkoordinasi dengan tim HR dan Fasilitas dalam pengumpulan kebutuhan sistem serta mendokumentasikan progres pengembangan secara berkala.",
+        en: "Designed and developed an internal web-based training platform (LMS) to standardize employee training workflows and evaluation tracking for HR administration. Coordinated with HR and Facilities teams to gather system requirements and documented development progress regularly.",
       },
     },
     {
@@ -104,8 +104,8 @@ export const experiencesContent = {
       period: "Semester Genap 2025/2026",
       type: "Academic",
       description: {
-        id: "Membimbing mahasiswa dalam memodelkan alur proses bisnis riil, penyusunan diagram alir, dan perancangan dokumen spesifikasi kebutuhan sistem perangkat lunak.",
-        en: "Mentored students in modeling real-world business workflows, flowchart diagramming, and formulating software requirements specification documentation.",
+        id: "Membimbing mahasiswa dalam memodelkan alur proses bisnis riil, penyusunan diagram alir, dan perancangan dokumen spesifikasi kebutuhan sistem perangkat lunak. Mengevaluasi tugas dan progres mahasiswa secara berkala, menyusun rekap hasil evaluasi sebagai bahan laporan ke dosen pengampu.",
+        en: "Mentored students in modeling real-world business workflows, flowchart diagramming, and formulating software requirements specification documentation. Evaluated student assignments and progress regularly, preparing evaluation summaries for reports to the supervising lecturer.",
       },
     },
     {
@@ -179,6 +179,20 @@ export const skillCategories = [
       { name: "SQLyog", level: "Tool", icon: "database", color: "#4479A1" },
       { name: "XAMPP", level: "Environment", icon: "xampp", color: "#FB7A24" },
       { name: "Postman / REST API", level: "Tool", icon: "postman", color: "#FF6C37" },
+      { name: "Dasar ERP (SAP)", level: "Foundation", icon: "database", color: "#0FAAFF" },
+    ],
+  },
+  {
+    category: {
+      id: "Administrasi & Manajemen Proyek",
+      en: "Administration & Project Management",
+    },
+    skills: [
+      { name: "Dokumentasi Proyek", level: "Core", icon: "database", color: "#38BDF8" },
+      { name: "Koordinasi Lintas Tim", level: "Core", icon: "database", color: "#34D399" },
+      { name: "Penyusunan Laporan Progres", level: "Core", icon: "database", color: "#A78BFA" },
+      { name: "Evaluasi Tugas/Hasil Kerja", level: "Core", icon: "database", color: "#FBBF24" },
+      { name: "Dasar Sistem ERP (SAP)", level: "Foundation", icon: "database", color: "#0FAAFF" },
     ],
   },
 ];
