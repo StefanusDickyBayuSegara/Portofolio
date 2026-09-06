@@ -66,10 +66,12 @@ export default function Contact() {
         setFormData({ name: '', email: '', message: '' });
       } else {
         console.log(response.status);
-        console.log(await response.json());
+        const errorDetails = await response.json().catch(() => null);
+        console.log(errorDetails);
         setStatus('error');
       }
-    } catch {
+    } catch (error) {
+      console.error('Formspree request failed:', error);
       setStatus('error');
     }
   };
