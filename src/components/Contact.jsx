@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, MessageSquare, Send, Check, Copy, MapPin, Sparkles } from 'lucide-react';
+import { Mail, MessageSquare, Check, Copy, MapPin } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { personalInfo, contactContent } from '../data/content';
 import ExternalLink from './ui/ExternalLink';
@@ -8,24 +8,7 @@ import { GithubIcon, LinkedinIcon } from './ui/Icons';
 export default function Contact() {
   const { t, language } = useLanguage();
 
-  // State untuk form input
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  // State status pengiriman form
-  const [status, setStatus] = useState('idle'); // 'idle' | 'submitting' | 'success' | 'error'
   const [copied, setCopied] = useState(false);
-
-  // Handle perubahan input form
-  const handleChange = (e) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
-  };
 
   // Salin alamat email ke clipboard dengan feedback visual
   const handleCopyEmail = async () => {
@@ -43,36 +26,6 @@ export default function Contact() {
       document.body.removeChild(el);
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
-    }
-  };
-
-  // Handle submit form ke endpoint Formspree
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus('submitting');
-
-    try {
-      const response = await fetch(contactContent.formspreeEndpoint, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        setStatus('success');
-        setFormData({ name: '', email: '', message: '' });
-      } else {
-        console.log(response.status);
-        const errorDetails = await response.json().catch(() => null);
-        console.log(errorDetails);
-        setStatus('error');
-      }
-    } catch (error) {
-      console.error('Formspree request failed:', error);
-      setStatus('error');
     }
   };
 
@@ -104,11 +57,8 @@ export default function Contact() {
           </p>
         </div>
 
-        {/* Layout 2 Kolom: Info Kontak & Form */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
-          
-          {/* Kolom Kiri: Kontak Langsung (5 dari 12 kolom) */}
-          <div className="lg:col-span-5 flex flex-col gap-6">
+        {/* Kontak langsung */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             
             {/* Kartu Chat WhatsApp Langsung */}
             <div className="p-6 rounded-2xl bg-dark-surface border border-dark-border hover:border-emerald-500/40 transition-all">
@@ -216,109 +166,6 @@ export default function Contact() {
                 </ExternalLink>
               </div>
             </div>
-
-          </div>
-
-          {/* Kolom Kanan: Form Kontak Sederhana (7 dari 12 kolom) */}
-          <div className="lg:col-span-7">
-            <div className="p-6 sm:p-8 rounded-2xl bg-dark-surface border border-dark-border shadow-sm">
-              <h3 className="text-lg font-bold text-slate-100 mb-2 flex items-center gap-2">
-                <Sparkles size={18} className="text-primary" />
-                <span>
-                  {language === 'id' ? 'Kirim Pesan Langsung' : 'Send a Direct Message'}
-                </span>
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-400 mb-6">
-                {language === 'id'
-                  ? 'Formulir ini terhubung langsung ke inbox email saya.'
-                  : 'This form sends a message directly to my inbox.'}
-              </p>
-
-              {/* Status Sukses */}
-              {status === 'success' && (
-                <div className="mb-6 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs sm:text-sm flex items-start gap-3">
-                  <Check size={18} className="shrink-0 mt-0.5" />
-                  <p>{t(contactContent.labels.successMessage)}</p>
-                </div>
-              )}
-
-              {/* Status Error */}
-              {status === 'error' && (
-                <div className="mb-6 p-4 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-300 text-xs sm:text-sm">
-                  <p>{t(contactContent.labels.errorMessage)}</p>
-                </div>
-              )}
-
-              <form onSubmit={handleSubmit} className="space-y-4">
-                {/* Input Nama */}
-                <div>
-                  <label htmlFor="contact-name" className="block text-xs font-mono text-slate-300 mb-1.5">
-                    {t(contactContent.labels.name)} <span className="text-primary">*</span>
-                  </label>
-                  <input
-                    id="contact-name"
-                    type="text"
-                    name="name"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder={t(contactContent.labels.namePlaceholder)}
-                    className="w-full px-4 py-2.5 rounded-xl bg-dark-bg border border-dark-border focus:border-primary focus:outline-none text-slate-100 text-sm placeholder:text-slate-500 transition-colors"
-                  />
-                </div>
-
-                {/* Input Email */}
-                <div>
-                  <label htmlFor="contact-email" className="block text-xs font-mono text-slate-300 mb-1.5">
-                    {t(contactContent.labels.email)} <span className="text-primary">*</span>
-                  </label>
-                  <input
-                    id="contact-email"
-                    type="email"
-                    name="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder={t(contactContent.labels.emailPlaceholder)}
-                    className="w-full px-4 py-2.5 rounded-xl bg-dark-bg border border-dark-border focus:border-primary focus:outline-none text-slate-100 text-sm placeholder:text-slate-500 transition-colors"
-                  />
-                </div>
-
-                {/* Input Pesan */}
-                <div>
-                  <label htmlFor="contact-message" className="block text-xs font-mono text-slate-300 mb-1.5">
-                    {t(contactContent.labels.message)} <span className="text-primary">*</span>
-                  </label>
-                  <textarea
-                    id="contact-message"
-                    name="message"
-                    rows="4"
-                    required
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder={t(contactContent.labels.messagePlaceholder)}
-                    className="w-full px-4 py-2.5 rounded-xl bg-dark-bg border border-dark-border focus:border-primary focus:outline-none text-slate-100 text-sm placeholder:text-slate-500 transition-colors resize-none"
-                  />
-                </div>
-
-                {/* Tombol Kirim */}
-                <button
-                  type="submit"
-                  disabled={status === 'submitting'}
-                  className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary text-slate-950 font-semibold text-sm hover:bg-sky-400 active:scale-[0.99] transition-all disabled:opacity-60 disabled:cursor-not-allowed shadow-md shadow-primary/20 cursor-pointer"
-                >
-                  {status === 'submitting' ? (
-                    <span>{t(contactContent.labels.sending)}</span>
-                  ) : (
-                    <>
-                      <Send size={15} />
-                      <span>{t(contactContent.labels.sendButton)}</span>
-                    </>
-                  )}
-                </button>
-              </form>
-            </div>
-          </div>
 
         </div>
 
