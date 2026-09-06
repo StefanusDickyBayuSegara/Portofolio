@@ -12,20 +12,19 @@ export const personalInfo = {
   whatsappUrl: "https://wa.me/6282286091079",
   github: "https://github.com/StefanusDickyBayuSegara",
   linkedin: "https://linkedin.com/in/stefanus-segara",
-  cvPath: "/CV_Stefanus_Dicky_Bayu_Segara_ID.pdf", // Mengarah ke file CV asli di folder public/
+  cvPath: "/CV_Stefanus_Dicky_Bayu_Segara.pdf", // Mengarah ke CV terbaru di folder public/
   
   location: {
     id: "D.I. Yogyakarta, Indonesia",
     en: "Yogyakarta Special Region, Indonesia",
   },
   roles: [
-    { id: "Web & Android Developer", en: "Web & Android Developer" },
-    { id: "Data Analyst", en: "Data Analyst" },
-    { id: "Web Developer", en: "Web Developer" },
+    { id: "Project Support & Documentation", en: "Project Support & Documentation" },
+    { id: "Fullstack Web Developer", en: "Fullstack Web Developer" },
   ],
   status: {
-    id: "Tersedia untuk Peluang Kerja: Web Developer, Project Support, Fullstack Developer (Yogyakarta / Remote)",
-    en: "Available for Opportunities: Web Developer, Project Support, Fullstack Developer (Yogyakarta / Remote)",
+    id: "Tersedia untuk Peluang Kerja: Product Manager, Web Developer, Data Analyst (Yogyakarta / Remote)",
+    en: "Available for Opportunities: Product Manager, Web Developer, Data Analyst (Yogyakarta / Remote)",
   },
 };
 
@@ -45,7 +44,7 @@ export const heroContent = {
   },
   subtitle: {
     id: "Lulusan Informatika yang membangun aplikasi web full-stack secara terstruktur, didukung kemampuan analisis proses bisnis dan dokumentasi proyek yang rapi.",
-    en: "Informatics graduate building structured full-stack web applications, supported by business process analysis skills and well-organized project documentation.",
+    en: "Informatics graduate building well-structured full-stack web applications, supported by strong business process analysis and project documentation skills.",
   },
   ctaProjects: {
     id: "Lihat Proyek",
@@ -68,7 +67,7 @@ export const aboutContent = {
   },
   bio: {
     id: "Lulusan Informatika dari Universitas Sanata Dharma (IPK 3.41/4.00, predikat Sangat Memuaskan) dengan pengalaman kuat membangun aplikasi web full-stack, mulai dari perancangan basis data, pengembangan frontend (React.js), backend (PHP, CodeIgniter, Laravel, Flask), hingga integrasi API dan sistem rekomendasi berbasis konten. Pemahaman ini diperkuat oleh pengalaman sebagai asisten dosen mata kuliah Analisis Proses Bisnis, di mana saya terbiasa memetakan alur proses kerja, mengidentifikasi tahapan kritis, mengevaluasi progres, dan menyusun dokumentasi/laporan secara terstruktur. Ditambah dasar pemahaman sistem ERP melalui program SAP University Partnership Program serta pengalaman koordinasi tim dari kegiatan kampus, latar belakang saya seimbang antara kekuatan teknis dan kemampuan administrasi/koordinasi proyek.",
-    en: "Informatics graduate from Sanata Dharma University (GPA 3.41/4.00, Very Satisfactory distinction) with strong experience building full-stack web applications, from database design and frontend development (React.js) to backend development (PHP, CodeIgniter, Laravel, Flask), API integration, and content-based recommendation systems. This foundation was strengthened through experience as a teaching assistant for Business Process Analysis, where I regularly mapped workflows, identified critical stages, evaluated progress, and prepared structured documentation and reports. Combined with foundational ERP knowledge from the SAP University Partnership Program and team coordination experience through campus activities, my background balances technical strength with project administration and coordination skills.",
+    en: "Informatics graduate from Sanata Dharma University (GPA 3.41/4.00, Very Satisfactory distinction) with strong experience building full-stack web applications, from database design and frontend development (React.js) to backend development (PHP, CodeIgniter, Laravel, Flask), API integration, and content-based recommendation systems. This foundation was strengthened through experience as a teaching assistant for Business Process Analysis, where I regularly mapped workflows, identified critical stages, evaluated progress, and prepared structured documentation and reports. Combined with foundational ERP knowledge from the SAP University Partnership Program and team coordination experience through campus activities, my background balances technical strength with project administration and coordination skills..",
   },
   downloadCv: {
     id: "Unduh CV Lengkap",
@@ -135,7 +134,6 @@ export const skillCategories = [
       { name: "JavaScript", level: "Primary", icon: "javascript", color: "#F7DF1E" },
       { name: "Python", level: "Primary", icon: "python", color: "#3776AB" },
       { name: "Kotlin", level: "Primary", icon: "kotlin", color: "#7F52FF" },
-      { name: "Java", level: "Secondary", icon: "java", color: "#ED8B00" },
       { name: "SQL", level: "Primary", icon: "database", color: "#4479A1" },
     ],
   },
@@ -156,19 +154,6 @@ export const skillCategories = [
   },
   {
     category: {
-      id: "Mobile & Cloud",
-      en: "Mobile & Cloud",
-    },
-    skills: [
-      { name: "Android SDK (Kotlin)", level: "Primary", icon: "android", color: "#3DDC84" },
-      { name: "MVVM Architecture", level: "Primary", icon: "android", color: "#3DDC84" },
-      { name: "LiveData & ViewModel", level: "Primary", icon: "android", color: "#3DDC84" },
-      { name: "Firebase Authentication", level: "Cloud", icon: "firebase", color: "#FFCA28" },
-      { name: "Cloud Firestore", level: "Cloud", icon: "firebase", color: "#FFCA28" },
-    ],
-  },
-  {
-    category: {
       id: "Database, Tools & Sistem",
       en: "Database, Tools & Systems",
     },
@@ -179,7 +164,6 @@ export const skillCategories = [
       { name: "SQLyog", level: "Tool", icon: "database", color: "#4479A1" },
       { name: "XAMPP", level: "Environment", icon: "xampp", color: "#FB7A24" },
       { name: "Postman / REST API", level: "Tool", icon: "postman", color: "#FF6C37" },
-      { name: "Dasar ERP (SAP)", level: "Foundation", icon: "database", color: "#0FAAFF" },
     ],
   },
   {

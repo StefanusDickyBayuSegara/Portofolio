@@ -1,7 +1,7 @@
 import { Code2, Globe2, Smartphone, Database, Terminal, Cpu } from 'lucide-react';
 import {
   SiAndroid, SiBootstrap, SiCodeigniter, SiFirebase, SiFlask,
-  SiGithub, SiHtml5, SiJavascript, SiKotlin, SiLaravel, SiMysql, SiOpenjdk,
+  SiGithub, SiHtml5, SiJavascript, SiKotlin, SiLaravel, SiMysql,
   SiPhp, SiPostman, SiPython, SiReact, SiSqlite, SiTailwindcss, SiXampp,
 } from 'react-icons/si';
 import { useLanguage } from '../context/LanguageContext';
@@ -35,7 +35,6 @@ export default function Skills() {
     flask: SiFlask,
     github: SiGithub,
     html5: SiHtml5,
-    java: SiOpenjdk,
     javascript: SiJavascript,
     kotlin: SiKotlin,
     laravel: SiLaravel,
@@ -66,8 +65,8 @@ export default function Skills() {
           </h2>
           <p className="text-slate-400 text-sm sm:text-base max-w-2xl mt-2 leading-relaxed">
             {language === 'id'
-              ? 'Mengembangkan antarmuka web yang modern dan responsif, didukung kemampuan back-end untuk membangun sistem yang terstruktur, termasuk aplikasi Android berbasis data.'
-              : 'Proficient in engineering backend architectures, modern responsive web interfaces, and data-driven Android applications.'}
+              ? 'Pengembangan web full-stack yang terstruktur, didukung kemampuan analisis proses bisnis, dokumentasi, dan koordinasi proyek.'
+              : 'Focused on structured full-stack web development, supported by business process analysis, documentation, and project coordination skills.'}
           </p>
         </div>
 
