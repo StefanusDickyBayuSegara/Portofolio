@@ -65,6 +65,8 @@ export default function Contact() {
         setStatus('success');
         setFormData({ name: '', email: '', message: '' });
       } else {
+        console.log(response.status);
+        console.log(await response.json());
         setStatus('error');
       }
     } catch {
