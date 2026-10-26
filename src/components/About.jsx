@@ -63,11 +63,11 @@ export default function About() {
                   {/* Badge Tipe & Periode */}
                   <div className="flex items-center justify-between gap-2 mb-3">
                     <span className="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20">
-                      {exp.type}
+                      {t(exp.type)}
                     </span>
                     <span className="text-[11px] font-mono text-slate-400 flex items-center gap-1">
                       <Calendar size={12} />
-                      {exp.period}
+                      {t(exp.period)}
                     </span>
                   </div>
 
@@ -93,4 +93,3 @@ export default function About() {
     </section>
   );
 }
-

@@ -12,19 +12,20 @@ export const personalInfo = {
   whatsappUrl: "https://wa.me/6282286091079",
   github: "https://github.com/StefanusDickyBayuSegara",
   linkedin: "https://linkedin.com/in/stefanus-segara",
-  cvPath: "/CV_Stefanus_Dicky_Bayu_Segara.pdf", // Mengarah ke CV terbaru di folder public/
+  cvPath: "/CV_Stefanus_ID_ATS.pdf",
   
   location: {
     id: "D.I. Yogyakarta, Indonesia",
     en: "Yogyakarta Special Region, Indonesia",
   },
   roles: [
-    { id: "Project Support & Documentation", en: "Project Support & Documentation" },
-    { id: "Fullstack Web Developer", en: "Fullstack Web Developer" },
+    { id: "Web Developer", en: "Web Developer" },
+    { id: "Analisis Data", en: "Data Analysis" },
+    { id: "Dukungan Proyek & Dokumentasi", en: "Project Support & Documentation" },
   ],
   status: {
-    id: "Tersedia untuk Peluang Kerja: Product Manager, Web Developer, Data Analyst (Yogyakarta / Remote)",
-    en: "Available for Opportunities: Product Manager, Web Developer, Data Analyst (Yogyakarta / Remote)",
+    id: "Tersedia untuk peluang sebagai Web Developer, Analisis Data, serta Dukungan Proyek & Dokumentasi (Yogyakarta / Remote)",
+    en: "Available for Web Developer, Data Analysis, and Project Support & Documentation roles (Yogyakarta / Remote)",
   },
 };
 
@@ -43,8 +44,8 @@ export const heroContent = {
     en: "Hello, I'm",
   },
   subtitle: {
-    id: "Lulusan Informatika yang membangun aplikasi web full-stack secara terstruktur, didukung kemampuan analisis proses bisnis dan dokumentasi proyek yang rapi.",
-    en: "Informatics graduate building well-structured full-stack web applications, supported by strong business process analysis and project documentation skills.",
+    id: "Lulusan S1 Informatika yang membangun aplikasi web full-stack dan menganalisis data dengan content-based filtering, TF-IDF, Cosine Similarity, SQL, dan Python. Berpengalaman dalam pengumpulan kebutuhan sistem, pemetaan proses bisnis, serta dokumentasi proyek dan serah terima teknis.",
+    en: "Informatics graduate building full-stack web applications and analyzing data with content-based filtering, TF-IDF, Cosine Similarity, SQL, and Python. Experienced in gathering system requirements, mapping business processes, and preparing project documentation and technical handover materials.",
   },
   ctaProjects: {
     id: "Lihat Proyek",
@@ -66,8 +67,8 @@ export const aboutContent = {
     en: "Background & Profile",
   },
   bio: {
-    id: "Lulusan Informatika dari Universitas Sanata Dharma (IPK 3.41/4.00, predikat Sangat Memuaskan) dengan pengalaman kuat membangun aplikasi web full-stack, mulai dari perancangan basis data, pengembangan frontend (React.js), backend (PHP, CodeIgniter, Laravel, Flask), hingga integrasi API dan sistem rekomendasi berbasis konten. Pemahaman ini diperkuat oleh pengalaman sebagai asisten dosen mata kuliah Analisis Proses Bisnis, di mana saya terbiasa memetakan alur proses kerja, mengidentifikasi tahapan kritis, mengevaluasi progres, dan menyusun dokumentasi/laporan secara terstruktur. Ditambah dasar pemahaman sistem ERP melalui program SAP University Partnership Program serta pengalaman koordinasi tim dari kegiatan kampus, latar belakang saya seimbang antara kekuatan teknis dan kemampuan administrasi/koordinasi proyek.",
-    en: "Informatics graduate from Sanata Dharma University (GPA 3.41/4.00, Very Satisfactory distinction) with strong experience building full-stack web applications, from database design and frontend development (React.js) to backend development (PHP, CodeIgniter, Laravel, Flask), API integration, and content-based recommendation systems. This foundation was strengthened through experience as a teaching assistant for Business Process Analysis, where I regularly mapped workflows, identified critical stages, evaluated progress, and prepared structured documentation and reports. Combined with foundational ERP knowledge from the SAP University Partnership Program and team coordination experience through campus activities, my background balances technical strength with project administration and coordination skills..",
+    id: "Lulusan S1 Informatika Universitas Sanata Dharma (IPK 3,41/4,00, predikat Sangat Memuaskan) dengan pengalaman membangun aplikasi full-stack menggunakan React.js, PHP, CodeIgniter, Laravel, Flask, dan MySQL. Skripsi saya, “Implementasi Sistem Rekomendasi Obat Bebas (OTC) Berbasis Web Menggunakan Content-Based Filtering,” menerapkan TF-IDF dan Cosine Similarity; model mencapai recall 100% dan F1-score 60,88%, dengan skor usability di atas 90. Terampil menggunakan SQL dan Python untuk analisis data, mengumpulkan kebutuhan sistem, memetakan proses bisnis, mencatat progres, serta menyusun dokumentasi teknis dan dokumen serah terima. Mata kuliah relevan meliputi Rekayasa Perangkat Lunak, Konsep dan Desain Basis Data, Data Mining, Machine Learning, Sistem Rekomendasi, Analisis Proses Bisnis, serta Interaksi Manusia dan Komputer. Telah menyelesaikan Data Analysis Fundamental dari MySkill dan SAP Overview melalui SAP University Partnership Program.",
+    en: "Informatics graduate from Sanata Dharma University (GPA 3.41/4.00, Very Satisfactory distinction) with experience building full-stack applications using React.js, PHP, CodeIgniter, Laravel, Flask, and MySQL. My thesis, “Web-Based Over-the-Counter (OTC) Drug Recommendation System Using Content-Based Filtering,” applied TF-IDF and Cosine Similarity; the model achieved 100% recall and a 60.88% F1-score, with a usability score above 90. Skilled in SQL and Python for data analysis, gathering system requirements, mapping business processes, tracking progress, and preparing technical documentation and handover materials. Relevant coursework includes Software Engineering, Database Concepts and Design, Data Mining, Machine Learning, Recommender Systems, Business Process Analysis, and Human-Computer Interaction. Completed Data Analysis Fundamental with MySkill and SAP Overview through the SAP University Partnership Program.",
   },
   downloadCv: {
     id: "Unduh CV Lengkap",
@@ -83,28 +84,28 @@ export const experiencesContent = {
   items: [
     {
       role: {
-        id: "Peserta Magang (Program MBKM)",
-        en: "Software Developer Intern (MBKM Program)",
+        id: "Magang, Web Developer (Program MBKM) - HR, Fasilitas & MIS",
+        en: "Web Developer Intern (MBKM Program) - HR, Facilities & MIS",
       },
-      institution: "PT Kanisius – Divisi HR, Fasilitas & SIM",
-      period: "Agustus – Desember 2025",
-      type: "Internship",
+      institution: "PT Kanisius - Divisi Management Information System (MIS)",
+      period: { id: "Agustus–Desember 2025", en: "August–December 2025" },
+      type: { id: "Magang", en: "Internship" },
       description: {
-        id: "Merancang dan mengembangkan platform pelatihan internal berbasis web (LMS) untuk standarisasi alur pelatihan karyawan serta sistem monitoring evaluasi bagi administrator HR. Turut berkoordinasi dengan tim HR dan Fasilitas dalam pengumpulan kebutuhan sistem serta mendokumentasikan progres pengembangan secara berkala.",
-        en: "Designed and developed an internal web-based training platform (LMS) to standardize employee training workflows and evaluation tracking for HR administration. Coordinated with HR and Facilities teams to gather system requirements and documented development progress regularly.",
+        id: "Mengembangkan platform pelatihan karyawan internal berbasis LMS dengan alur terpisah untuk karyawan dan admin menggunakan PHP, CodeIgniter, dan MySQL. Mengumpulkan kebutuhan sistem dan data administratif dari tim HR, Fasilitas, dan MIS; menyusun catatan kebutuhan serta mendokumentasikan progres secara berkala untuk pembimbing lapangan. Menyerahkan dokumentasi teknis dan alur sistem kepada tim internal.",
+        en: "Developed an internal employee training platform using an LMS with separate workflows for employees and administrators, built with PHP, CodeIgniter, and MySQL. Gathered system requirements and administrative data from HR, Facilities, and MIS; maintained requirements notes and regular progress documentation for the field supervisor. Handed over technical documentation and system workflows to the internal team.",
       },
     },
     {
       role: {
-        id: "Asisten Dosen – Analisis Proses Bisnis",
-        en: "Teaching Assistant – Business Process Analysis",
+        id: "Asisten Dosen, Analisis Proses Bisnis (Kelas CP)",
+        en: "Teaching Assistant, Business Process Analysis (CP Class)",
       },
       institution: "Universitas Sanata Dharma",
-      period: "Semester Genap 2025/2026",
-      type: "Academic",
+      period: { id: "Semester Genap 2025/2026", en: "Even Semester 2025/2026" },
+      type: { id: "Akademik", en: "Academic" },
       description: {
-        id: "Membimbing mahasiswa dalam memodelkan alur proses bisnis riil, penyusunan diagram alir, dan perancangan dokumen spesifikasi kebutuhan sistem perangkat lunak. Mengevaluasi tugas dan progres mahasiswa secara berkala, menyusun rekap hasil evaluasi sebagai bahan laporan ke dosen pengampu.",
-        en: "Mentored students in modeling real-world business workflows, flowchart diagramming, and formulating software requirements specification documentation. Evaluated student assignments and progress regularly, preparing evaluation summaries for reports to the supervising lecturer.",
+        id: "Membimbing mahasiswa Kelas CP dalam menerapkan metode analisis proses bisnis, memetakan alur proses, dan mengidentifikasi tahapan kritis. Mengevaluasi tugas dan progres, memberikan umpan balik, serta menyusun rangkuman evaluasi sebagai bahan laporan dosen.",
+        en: "Guided students in the CP class in applying business process analysis methods, mapping workflows, and identifying critical stages. Evaluated assignments and progress, provided feedback, and prepared evaluation summaries for the lecturer's reports.",
       },
     },
     {
@@ -113,11 +114,11 @@ export const experiencesContent = {
         en: "Logistics Coordinator",
       },
       institution: "Kepanitiaan Paskah, Campus Ministry USD",
-      period: "Maret – April 2025",
-      type: "Organization",
+      period: { id: "Maret–April 2025", en: "March–April 2025" },
+      type: { id: "Organisasi", en: "Organization" },
       description: {
-        id: "Memimpin tim logistik dalam perencanaan inventaris, pengadaan teknis, dan manajemen operasional perlengkapan kegiatan komunitas kampus.",
-        en: "Led the logistics crew in inventory planning, technical procurement, and operational equipment management for university community events.",
+        id: "Memimpin tim logistik dengan menyusun daftar kebutuhan dan jadwal persiapan, lalu menindaklanjuti setiap penanggung jawab agar persiapan perlengkapan kegiatan selesai tepat waktu.",
+        en: "Led the logistics team by preparing a list of requirements and a preparation schedule, then following up with each owner to ensure event preparations were completed on time.",
       },
     },
   ],
@@ -133,6 +134,7 @@ export const skillCategories = [
       { name: "PHP", level: "Primary", icon: "php", color: "#777BB4" },
       { name: "JavaScript", level: "Primary", icon: "javascript", color: "#F7DF1E" },
       { name: "Python", level: "Primary", icon: "python", color: "#3776AB" },
+      { name: "Java", level: "Primary", icon: "database", color: "#ED8B00" },
       { name: "Kotlin", level: "Primary", icon: "kotlin", color: "#7F52FF" },
       { name: "SQL", level: "Primary", icon: "database", color: "#4479A1" },
     ],
@@ -161,9 +163,53 @@ export const skillCategories = [
       { name: "MySQL", level: "Database", icon: "mysql", color: "#4479A1" },
       { name: "SQLite", level: "Database", icon: "sqlite", color: "#003B57" },
       { name: "Git & GitHub", level: "Version Control", icon: "github", color: "#F0F6FC" },
-      { name: "SQLyog", level: "Tool", icon: "database", color: "#4479A1" },
+      { name: "Firebase (Authentication, Cloud Firestore)", level: "Database", icon: "firebase", color: "#FFCA28" },
+      { name: "REST API", level: "Integration", icon: "database", color: "#38BDF8" },
+      { name: "JWT Authentication", level: "Authentication", icon: "database", color: "#A78BFA" },
       { name: "XAMPP", level: "Environment", icon: "xampp", color: "#FB7A24" },
-      { name: "Postman / REST API", level: "Tool", icon: "postman", color: "#FF6C37" },
+    ],
+  },
+  {
+    category: {
+      id: "Analisis Data",
+      en: "Data Analysis",
+    },
+    skills: [
+      { name: "SQL", level: "Primary", icon: "database", color: "#4479A1" },
+      { name: "MySQL", level: "Database", icon: "mysql", color: "#4479A1" },
+      { name: "Python", level: "Primary", icon: "python", color: "#3776AB" },
+      { name: "Data Mining", level: "Core", icon: "database", color: "#38BDF8" },
+      { name: "Machine Learning", level: "Core", icon: "database", color: "#A78BFA" },
+      { name: "Recommender Systems", level: "Core", icon: "database", color: "#34D399" },
+      { name: "TF-IDF", level: "Core", icon: "database", color: "#FBBF24" },
+      { name: "Cosine Similarity", level: "Core", icon: "database", color: "#FB7185" },
+      {
+        name: {
+          id: "Evaluasi Model (Recall, F1-Score)",
+          en: "Model Evaluation (Recall, F1-Score)",
+        },
+        level: "Core",
+        icon: "database",
+        color: "#60A5FA",
+      },
+      {
+        name: {
+          id: "Visualisasi Data (Pie dan Bar Chart)",
+          en: "Data Visualization (Pie and Bar Charts)",
+        },
+        level: "Core",
+        icon: "database",
+        color: "#F97316",
+      },
+      {
+        name: {
+          id: "Dasar-Dasar Analisis Data",
+          en: "Data Analysis Fundamentals",
+        },
+        level: "Core",
+        icon: "database",
+        color: "#0FAAFF",
+      },
     ],
   },
   {
@@ -172,11 +218,21 @@ export const skillCategories = [
       en: "Administration & Project Management",
     },
     skills: [
-      { name: "Dokumentasi Proyek", level: "Core", icon: "database", color: "#38BDF8" },
-      { name: "Koordinasi Lintas Tim", level: "Core", icon: "database", color: "#34D399" },
-      { name: "Penyusunan Laporan Progres", level: "Core", icon: "database", color: "#A78BFA" },
-      { name: "Evaluasi Tugas/Hasil Kerja", level: "Core", icon: "database", color: "#FBBF24" },
-      { name: "Dasar Sistem ERP (SAP)", level: "Foundation", icon: "database", color: "#0FAAFF" },
+      { name: { id: "Dokumentasi Proyek", en: "Project Documentation" }, level: "Core", icon: "database", color: "#38BDF8" },
+      { name: { id: "Koordinasi Lintas Tim", en: "Cross-team Coordination" }, level: "Core", icon: "database", color: "#34D399" },
+      { name: { id: "Pelaporan Progres", en: "Progress Reporting" }, level: "Core", icon: "database", color: "#A78BFA" },
+      { name: { id: "Analisis Proses Bisnis", en: "Business Process Analysis" }, level: "Core", icon: "database", color: "#FBBF24" },
+      { name: { id: "Dasar Sistem ERP (SAP)", en: "SAP/ERP Fundamentals" }, level: "Foundation", icon: "database", color: "#0FAAFF" },
+    ],
+  },
+  {
+    category: {
+      id: "Bahasa",
+      en: "Languages",
+    },
+    skills: [
+      { name: { id: "Bahasa Indonesia", en: "Indonesian" }, level: "Language", icon: "database", color: "#EF4444" },
+      { name: { id: "Bahasa Inggris", en: "English" }, level: "Language", icon: "database", color: "#3B82F6" },
     ],
   },
 ];
@@ -202,8 +258,8 @@ export const projectsContent = {
       year: "2026",
       tech: ["React.js", "Flask (Python)", "MySQL", "SQLAlchemy", "JWT", "Bootstrap"],
       description: {
-        id: "Sistem rekomendasi obat OTC berbasis gejala menggunakan React.js, Flask (Python), MySQL, SQLAlchemy, JWT, dan Bootstrap, dengan hasil evaluasi recall 100%, F1-score 60,88%, serta usability score di atas 90.",
-        en: "Symptom-based OTC drug recommendation system built with React.js, Flask (Python), MySQL, SQLAlchemy, JWT, and Bootstrap, achieving 100% recall, a 60.88% F1-score, and a usability score above 90.",
+        id: "Membangun sistem rekomendasi obat bebas (OTC) berbasis gejala menggunakan Content-Based Filtering dengan TF-IDF dan Cosine Similarity. Mengimplementasikan React.js, Bootstrap, Flask REST API, SQLAlchemy, MySQL, dan JWT Authentication, serta filter keamanan berdasarkan usia, jenis kelamin, status kehamilan, dan riwayat medis. Evaluasi menghasilkan recall 100%, F1-score 60,88%, dan skor usability di atas 90.",
+        en: "Built a symptom-based over-the-counter (OTC) drug recommendation system using content-based filtering with TF-IDF and Cosine Similarity. Implemented React.js, Bootstrap, a Flask REST API, SQLAlchemy, MySQL, and JWT authentication, with safety filters for age, sex, pregnancy status, and medical history. Evaluation achieved 100% recall, a 60.88% F1-score, and a usability score above 90.",
       },
       githubUrl: "https://github.com/StefanusDickyBayuSegara",
       demoUrl: null,
@@ -217,8 +273,8 @@ export const projectsContent = {
       year: "2026",
       tech: ["Kotlin", "MVVM", "SQLite", "Firebase"],
       description: {
-        id: "Aplikasi pencatat keuangan Android dengan kategori transaksi, grafik pie/bar, budget limit, ekspor PDF, backup/restore cloud, dan dark mode.",
-        en: "Android finance tracker with transaction categories, pie/bar charts, budget limits, PDF export, cloud backup/restore, and dark mode.",
+        id: "Membangun aplikasi Android untuk mencatat, memantau, dan menganalisis arus kas harian di beberapa dompet menggunakan Kotlin, MVVM, dan SQLite. Fitur mencakup transaksi berkategori, grafik pie dan bar, peringatan otomatis saat batas anggaran tercapai, ekspor laporan PDF, serta Firebase Authentication dan Cloud Firestore untuk login dan backup/restore data.",
+        en: "Built an Android app to track, monitor, and analyze daily cash flow across multiple wallets using Kotlin, MVVM, and SQLite. Features include categorized transactions, pie and bar charts, automatic budget-limit alerts, PDF report export, and Firebase Authentication and Cloud Firestore for sign-in and data backup/restore.",
       },
       githubUrl: "https://github.com/StefanusDickyBayuSegara",
       demoUrl: null,
@@ -232,8 +288,8 @@ export const projectsContent = {
       year: "2025",
       tech: ["PHP", "CodeIgniter", "MySQL", "SQLyog", "XAMPP"],
       description: {
-        id: "Platform pelatihan internal berbasis web dengan model LMS (Learning Management System) modern, menyediakan jalur terpisah untuk alur belajar karyawan serta portal manajemen evaluasi pelatihan di sisi tim HR dan SIM.",
-        en: "Internal web LMS platform designed for structured company skill training, providing separate role-based portals for employee self-paced learning and HR/SIM administrative course management.",
+        id: "Mengembangkan platform pelatihan karyawan internal berbasis LMS dengan alur terpisah untuk karyawan dan admin menggunakan PHP, CodeIgniter, dan MySQL. Mengumpulkan kebutuhan sistem dari tim HR, Fasilitas, dan MIS, mendokumentasikan progres secara berkala, serta menyiapkan dokumentasi teknis dan alur sistem untuk serah terima kepada tim internal.",
+        en: "Developed an internal employee training platform using an LMS with separate workflows for employees and administrators, built with PHP, CodeIgniter, and MySQL. Gathered system requirements from HR, Facilities, and MIS, documented progress regularly, and prepared technical documentation and system workflows for handover to the internal team.",
       },
       githubUrl: "https://github.com/StefanusDickyBayuSegara",
       demoUrl: null,
@@ -262,6 +318,14 @@ export const certificatesContent = {
       imagePlaceholder: "certificate-sap01.jpeg",
     },
     {
+      id: "data-analysis-fundamental",
+      badge: "No. 341210/DTA/LM/9/2026",
+      title: "Data Analysis Fundamental",
+      issuer: "MySkill (PT Linimuda Inspirasi Negeri)",
+      date: "September 2026",
+      imagePlaceholder: "Sertif MySkill Data Analysis Fundamental.pdf",
+    },
+    {
       id: "magang-sim-mbkm",
       badge: "Sertifikat Magang",
       title: "Sertifikat Magang SIM (Sistem Informasi Manajemen)",
@@ -286,8 +350,8 @@ export const contactContent = {
     en: "Contact & Connect",
   },
   subtitle: {
-    id: "Terbuka untuk peluang kerja full-time, proyek lepas (freelance), maupun kolaborasi teknis. Silakan tinggalkan pesan atau hubungi langsung via WhatsApp.",
-    en: "Open for full-time career roles, freelance projects, or technical collaborations. Leave a message below or contact directly via WhatsApp.",
+    id: "Terbuka untuk peluang kerja full-time, proyek lepas (freelance), maupun kolaborasi teknis. Silakan hubungi saya langsung melalui WhatsApp atau email.",
+    en: "Open to full-time roles, freelance projects, and technical collaborations. Please contact me directly by WhatsApp or email.",
   },
   formspreeEndpoint: "https://formspree.io/f/xdknqvqz", // Ganti dengan ID formspree gratis milikmu jika sudah ada
   labels: {
@@ -317,4 +381,3 @@ export const footerContent = {
     en: "Designed & engineered with React.js and Tailwind CSS.",
   },
 };
-

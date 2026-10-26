@@ -57,20 +57,20 @@ export default function Skills() {
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-dark-surface border border-dark-border text-xs font-mono text-primary mb-3">
             <Cpu size={14} />
             <span>
-              {language === 'id' ? 'Keahlian Teknis & Alat Kerja' : 'Technical Skills & Tooling'}
+              {language === 'id' ? 'Pengembangan Web, Analisis Data & Dokumentasi' : 'Web Development, Data Analysis & Documentation'}
             </span>
           </div>
           <h2 className="text-2xl sm:text-4xl font-bold text-slate-100 tracking-tight">
-            {language === 'id' ? 'Teknologi yang Sering Digunakan' : 'Technologies & Tech Stack'}
+            {language === 'id' ? 'Keahlian & Teknologi' : 'Skills & Technologies'}
           </h2>
           <p className="text-slate-400 text-sm sm:text-base max-w-2xl mt-2 leading-relaxed">
             {language === 'id'
-              ? 'Pengembangan web full-stack yang terstruktur, didukung kemampuan analisis proses bisnis, dokumentasi, dan koordinasi proyek.'
-              : 'Focused on structured full-stack web development, supported by business process analysis, documentation, and project coordination skills.'}
+              ? 'Pengembangan web full-stack, analisis data dan evaluasi model, serta dukungan proyek melalui pengumpulan kebutuhan, pemetaan proses bisnis, dan dokumentasi teknis.'
+              : 'Full-stack web development, data analysis and model evaluation, plus project support through requirements gathering, business process mapping, and technical documentation.'}
           </p>
         </div>
 
-        {/* Modular Grid: 4 Kategori Keahlian */}
+        {/* Modular grid of skill categories */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {skillCategories.map((cat, idx) => (
             <div
@@ -87,7 +87,7 @@ export default function Skills() {
                     {t(cat.category)}
                   </h3>
                   <span className="text-[11px] font-mono text-slate-400">
-                    {cat.skills.length} {language === 'id' ? 'teknologi' : 'technologies'}
+                    {cat.skills.length} {language === 'id' ? 'keahlian' : 'skills'}
                   </span>
                 </div>
               </div>
@@ -103,7 +103,7 @@ export default function Skills() {
                       const SkillIcon = skillIcons[skill.icon] || Terminal;
                       return <SkillIcon size={19} aria-hidden="true" style={{ color: skill.color }} />;
                     })()}
-                    <span className="text-xs sm:text-sm font-medium">{skill.name}</span>
+                    <span className="text-xs sm:text-sm font-medium">{t(skill.name)}</span>
                   </div>
                 ))}
               </div>
@@ -115,4 +115,3 @@ export default function Skills() {
     </section>
   );
 }
-
