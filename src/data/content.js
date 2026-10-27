@@ -12,7 +12,10 @@ export const personalInfo = {
   whatsappUrl: "https://wa.me/6282286091079",
   github: "https://github.com/StefanusDickyBayuSegara",
   linkedin: "https://linkedin.com/in/stefanus-segara",
-  cvPath: "/CV_Stefanus_ID_ATS.pdf",
+  cvPath: {
+    id: "/CV_Stefanus_ID_ATS.pdf",
+    en: "/CV_Stefanus_EN_ATS.pdf",
+  },
   
   location: {
     id: "D.I. Yogyakarta, Indonesia",

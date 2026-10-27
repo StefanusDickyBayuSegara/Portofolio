@@ -3,7 +3,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { personalInfo, aboutContent, experiencesContent } from '../data/content';
 
 export default function About() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <section id="tentang" className="py-20 md:py-28 border-t border-dark-border/60">
@@ -29,8 +29,8 @@ export default function About() {
             {/* Tombol Unduh CV */}
             <div className="pt-2">
               <a
-                href={personalInfo.cvPath}
-                download="CV-Stefanus-Dicky-Bayu-Segara.pdf"
+                href={t(personalInfo.cvPath)}
+                download={`CV_Stefanus_Dicky_Bayu_Segara_${language.toUpperCase()}.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-dark-surface hover:bg-dark-hover border border-dark-border hover:border-primary/50 text-slate-100 text-sm font-medium transition-all duration-200 group shadow-sm hover:shadow-primary/10"
