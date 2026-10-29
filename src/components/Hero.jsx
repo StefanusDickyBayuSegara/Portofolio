@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Mail, MapPin } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { personalInfo, heroContent } from '../data/content';
-import profileImg from '../assets/profile.jpg';
+import profileImg from '../assets/profile-portfolio.jpg';
 import ExternalLink from './ui/ExternalLink';
 import PlaceholderImage from './ui/PlaceholderImage';
 import { GithubIcon, LinkedinIcon } from './ui/Icons';
@@ -172,7 +172,7 @@ export default function Hero() {
               <div className="relative rounded-2xl p-2 bg-dark-surface border border-dark-border shadow-2xl overflow-hidden">
                 <PlaceholderImage
                   src={profileImg}
-                  expectedFilename="profile.jpg"
+                  expectedFilename="profile-portfolio.jpg"
                   aspectRatio="aspect-[4/5]"
                   className="rounded-xl"
                   iconSize={36}
@@ -202,4 +202,3 @@ export default function Hero() {
     </section>
   );
 }
-
