@@ -57,7 +57,7 @@ export default function Certificates() {
                     ) : (
                       <ImageLightbox
                         src={certFileSrc}
-                        alt={cert.title}
+                        alt={t(cert.title)}
                         expectedFilename={`src/assets/certificates/${cert.imagePlaceholder}`}
                         aspectRatio="aspect-[16/10]"
                         className="group-hover:scale-102 transition-transform duration-300"
@@ -69,25 +69,25 @@ export default function Certificates() {
                   {/* Badge Terverifikasi */}
                   <div className="flex items-center gap-1.5 text-xs font-mono text-primary mb-2">
                     <CheckCircle2 size={14} />
-                    <span>{cert.badge}</span>
+                    <span>{t(cert.badge)}</span>
                   </div>
 
                   {/* Judul Sertifikasi */}
                   <h3 className="text-lg sm:text-xl font-bold text-slate-100 mb-2 group-hover:text-primary transition-colors">
-                    {cert.title}
+                    {t(cert.title)}
                   </h3>
 
                   {/* Institusi Penerbit */}
                   <div className="flex items-start gap-2 text-xs sm:text-sm text-slate-300 mb-3">
                     <Building2 size={15} className="text-slate-400 mt-0.5 shrink-0" />
-                    <span>{cert.issuer}</span>
+                    <span>{t(cert.issuer)}</span>
                   </div>
                 </div>
 
                 {/* Tanggal Terbit */}
                 <div className="pt-4 border-t border-dark-border/60 flex items-center gap-2 text-xs font-mono text-slate-400">
                   <Calendar size={13} className="text-slate-400" />
-                  <span>{cert.date}</span>
+                  <span>{t(cert.date)}</span>
                 </div>
 
               </div>
@@ -99,4 +99,3 @@ export default function Certificates() {
     </section>
   );
 }
-
